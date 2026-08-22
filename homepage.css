@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: whitesmoke;
+    background-image: url('background image.png');
     color: #222;
 }
 
@@ -71,12 +71,14 @@ body {
 }
 
 .hero h1 {
+    color: #f5f0f0;
     font-size: 28px;
     letter-spacing: 3px;
     margin-bottom: 25px;
 }
 
 .hero h2 {
+    color: #f5f0f0;
     font-size: 48px;
     line-height: 1.2;
     margin-bottom: 35px;
