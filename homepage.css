@@ -134,3 +134,14 @@ body {
 .feature-card p {
     margin: 12px 0;
 }
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
