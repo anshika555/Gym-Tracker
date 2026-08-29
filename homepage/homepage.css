@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('images/background image.png');
+    background-image: url('../images/background image.png');
     color: #222;
 }
 
@@ -168,7 +168,7 @@ ul{
     align-items:center;
 }
 .logo{
-    background-image: url("images/image1.jpeg");
+    background-image: url("../images/image1.jpeg");
     height:50px;
     width:50px;
     background-size:contain;
