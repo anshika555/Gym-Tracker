@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('background image.png');
+    background-image: url('images/background image.png');
     color: #222;
 }
 
@@ -34,13 +34,15 @@ body {
     padding: 5px;
     width: 60px;
     font-size: 28px;
-}
+} 
 
 .nav-links {
     display: flex;
     align-items: center;
     gap: 30px;
 }
+
+
 
 .nav-links a {
     text-decoration: none;
@@ -58,11 +60,14 @@ body {
     padding: 8px 18px;
     border-radius: 5px;
 }
-
+.login-btn{
+    color:black;
+}
 .signup-btn {
     background-color: #222;
     color: white !important;
 }
+
 
 
 .hero {
@@ -135,13 +140,49 @@ body {
     margin: 12px 0;
 }
 
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.footpanel1{
+    color:black;
+    background-color:yellowgreen;
+    height:200px;
+    display:flex;
+    justify-content:space-evenly;
 }
+ul a{
+    display:block;
+    font-size:0.9rem;
+    margin-top:10px;
+    color:darkslategrey;
+}
+ul p{
+    font-weight:700;
+}
+ul{
+    margin-top:50px;
+}
+.footpanel2{
+    height:68px;
+    background-color:yellowgreen;
+    border-top:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.logo{
+    background-image: url("images/image1.jpeg");
+    height:50px;
+    width:50px;
+    background-size:contain;
+}
+.footpanel3{
+    background-color:yellowgreen;
+    color:black;
+    height:60px;
+    font-size:0.75rem;
+    text-align:center;
+} 
 
-footer p {
-    font-size: 14px;
+.footpanel3 p{
+    font-size: 1rem;
+    margin-right:20px;
+
 }
