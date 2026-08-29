@@ -1,4 +1,7 @@
-
+*{
+    margin:0px;
+    padding:0px;
+}
 .form {
     border: 2px solid black;
     text-align: center;
@@ -114,14 +117,15 @@ body {
 }
 
 footer {
-    background-color: #222;
-    color: white;
+    background-color: yellowgreen;
+    color: black;
     text-align: center;
     padding: 20px;
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 1rem;
+
 }
 
 
