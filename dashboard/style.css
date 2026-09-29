@@ -4,3 +4,51 @@
 
 /* Functional interaction additions */
 .workout-history{margin-top:20px}.workout-list{display:flex;flex-direction:column;gap:8px}.workout-list-row{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:#f6f9fb;border:1px solid #e2e8ed;border-radius:7px}.workout-list-row b{display:block;font-size:13px;color:#17283b}.workout-list-row small{display:block;color:#6b7d90;font-size:11px;margin-top:4px}.outline-small{border:1px solid #42a94d;background:#fff;color:#278b35;border-radius:5px;padding:6px 12px;cursor:pointer;font-size:12px}.outline-small:hover{background:#eef9ef}.row-delete{border:0;background:transparent;color:#9aa8b5;font-size:20px;line-height:1;cursor:pointer;padding:2px 6px}.row-delete:hover{color:#e33}.empty-state{text-align:center;color:#718296;padding:25px!important}.muted-text{color:#7a8998;font-size:11px}.modal-box select,.modal-box textarea{display:block;width:100%;padding:10px;border:1px solid #ccd7df;border-radius:6px;margin-top:5px;font-family:inherit;background:#fff}.modal-box textarea{resize:vertical}.full-field{grid-column:1/-1}.water-ring{--water-progress:252deg;background:conic-gradient(#2581ce var(--water-progress),#e1e9f0 0);border:0!important;position:relative}.water-ring::after{content:"";position:absolute;width:104px;height:104px;background:#fff;border-radius:50%;z-index:0}.water-ring strong,.water-ring small{position:relative;z-index:1}
+
+
+/* --- FitTrack shared top navigation styling --- */
+.topbar {
+    height: 70px;
+    background-color: yellowgreen;
+    padding: 0 60px;
+    border-bottom: 1px solid #ddd;
+    font-family: "Times New Roman", serif;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #111;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Times New Roman", serif;
+}
+
+.brand-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+}
+
+.top-user {
+    font-family: "Times New Roman", serif;
+    color: #111;
+    font-size: 17px;
+}
+
+.top-user-name {
+    font-weight: 600;
+}
+
+.app {
+    min-height: calc(100vh - 90px);
+}
+
+/* Keep the dashboard's side navigation separate from the serif top navigation. */
+.sidebar {
+    font-family: Arial, Helvetica, sans-serif;
+}

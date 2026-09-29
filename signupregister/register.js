@@ -288,3 +288,7 @@ window.addEventListener("load", function () {
 console.log(
     "FitTrack Registration/Login page loaded successfully!"
 );
+function gotodasboard(event) {
+    event.preventDefault();
+    window.open("../dashboard/dashboard.html", "_blank");
+}
