@@ -129,5 +129,85 @@ footer p {
     font-size: 1rem;
 
 }
+/* ==========================================
+   JAVASCRIPT EFFECTS
+   ========================================== */
 
+
+/* Navbar scroll effect */
+
+.navbar {
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Navbar link animation */
+
+.nav-links a {
+    transition: color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.nav-links a.nav-hover {
+    transform: translateY(-2px);
+}
+
+
+/* Form hover */
+
+.form {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.form:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Input focus */
+
+input[type="text"],
+input[type="num"],
+input[type="email"],
+input[type="password"] {
+    transition: border 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="num"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+
+    outline: none;
+
+    border: 1px solid yellowgreen;
+
+    box-shadow: 0 0 5px rgba(154, 205, 50, 0.5);
+
+}
+
+
+/* Buttons */
+
+button {
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 30px;
+}
 
