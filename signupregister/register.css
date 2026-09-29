@@ -112,9 +112,10 @@ button:hover{
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #d3d3d3;
+    background-image: url('../images/background image.png');
     color: #222;
     align-items: center;
+    font-family:"Times New Roman", serif;
 }
 
 footer {
