@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FitTrack - Profile</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="profile">
+<header class="topbar"><a class="brand" href="dashboard.html"><span class="brand-mark">FIT</span><span>FITTRACK</span></a><div class="top-user"><span class="notification">●</span><span class="avatar">R</span><span class="top-user-name">Hi, Rahul</span><span>⌄</span></div></header>
+<div class="app"><aside class="sidebar"><nav>
+<a class="nav-item" href="dashboard.html"><span>⌂</span>Dashboard</a><a class="nav-item" href="workout.html"><span>♢</span>Workout</a><a class="nav-item" href="diet.html"><span>♡</span>Diet</a><a class="nav-item" href="progress.html"><span>▥</span>Progress</a><a class="nav-item active" href="profile.html"><span>♙</span>Profile</a>
+</nav></aside>
+<main class="content"><section class="page-heading"><div><h1>My Profile</h1><p>Your fitness journey starts with you.</p></div></section>
+<section class="profile-top"><article class="panel profile-card"><div class="big-avatar">R</div><div><h2 data-profile-name>Rahul Sharma</h2><p data-profile-meta>Beginner | Male</p><button class="primary-btn small" onclick="toggleEdit()">Edit Profile</button></div></article><article class="panel goal-card"><div class="goal-icon">◎</div><div><small>Fitness Goal</small><h2 data-goal-name>Muscle Gain</h2><p data-goal-description>Build more strength and improve your fitness.</p></div></article></section>
+<section class="profile-grid"><article class="panel"><div class="panel-head"><h2>♙ Personal Details</h2></div><div class="detail-list"><p><span>Age</span><b data-profile-age>22</b></p><p><span>Height</span><b data-profile-height>175 cm</b></p><p><span>Weight</span><b data-profile-weight>68 kg</b></p><p><span>Fitness Level</span><b data-profile-level>Beginner</b></p><p><span>Goal</span><b data-profile-goal>Muscle Gain</b></p></div></article>
+<div class="stack"><article class="panel"><div class="panel-head"><h2>▣ Bio</h2><button class="icon-btn">✎</button></div><p class="bio" data-profile-bio>“Small steps every day lead to big results.”</p></article><article class="panel"><div class="panel-head"><h2>▥ Quick Stats</h2></div><div class="profile-stats"><div><b>12</b><small>Workouts</small></div><div><b>7</b><small>Day Streak</small></div><div><b>2.1 L</b><small>Water Intake</small></div><div><b>85 g</b><small>Protein</small></div></div></article></div></section>
+</main></div>
+<div class="modal" id="editModal"><div class="modal-box"><button class="close" onclick="closeModal('editModal')">×</button><h2>Edit Profile</h2><div class="form-grid">
+<label>Name<input id="profileName" value="Rahul Sharma"></label>
+<label>Age<input id="profileAge" type="number" value="22"></label>
+<label>Height<input id="profileHeight" value="175 cm"></label>
+<label>Weight<input id="profileWeight" value="68 kg"></label>
+<label>Fitness Level<select id="profileLevel"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label>
+<label>Goal<select id="profileGoal"><option>Muscle Gain</option><option>Weight Loss</option><option>General Fitness</option><option>Strength</option></select></label>
+<label class="full-field">Bio<textarea id="profileBio" rows="3"></textarea></label>
+</div><button class="primary-btn" onclick="saveProfile()">Save Changes</button></div></div>
+<script src="script.js"></script></body></html>

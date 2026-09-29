@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack - Workout</title><link rel="stylesheet" href="style.css">
+</head>
+<body data-page="workout">
+<header class="topbar"><a class="brand" href="dashboard.html"><span class="brand-mark">FIT</span><span>FITTRACK</span></a><div class="top-user"><span class="notification">●</span><span class="avatar">R</span><span class="top-user-name">Hi, Rahul</span><span>⌄</span></div></header>
+<div class="app">
+<aside class="sidebar"><nav>
+<a class="nav-item" href="dashboard.html"><span>⌂</span>Dashboard</a>
+<a class="nav-item active" href="workout.html"><span>♢</span>Workout</a>
+<a class="nav-item" href="diet.html"><span>♡</span>Diet</a>
+<a class="nav-item" href="progress.html"><span>▥</span>Progress</a>
+<a class="nav-item" href="profile.html"><span>♙</span>Profile</a>
+</nav></aside>
+<main class="content">
+<section class="page-heading"><div><h1>Workout</h1><p>Track your exercises, sets, reps and weights.</p></div><button class="primary-btn" onclick="openModal('workoutModal')">＋ Add Workout</button></section>
+<section class="stat-grid four">
+<article class="stat-card orange"><div class="stat-icon">♢</div><div><small>Today's Workout</small><strong>Upper Body</strong><em>45 min</em></div></article>
+<article class="stat-card green"><div class="stat-icon">▦</div><div><small>Total Exercises</small><strong id="exerciseCount">5</strong><em>Completed</em></div></article>
+<article class="stat-card orange"><div class="stat-icon">♨</div><div><small>Calories Burned</small><strong>320 kcal</strong><em>Today</em></div></article>
+<article class="stat-card red"><div class="stat-icon">♨</div><div><small>Workout Streak</small><strong>7 Days</strong><em>Keep it up!</em></div></article>
+</section>
+<section class="two-col">
+<article class="panel"><div class="panel-head"><h2>♢ Today's Exercises — <span id="currentWorkoutName">Upper Body</span></h2><button class="text-btn" onclick="openModal('exerciseModal')">＋ Add Exercise</button></div>
+<div class="table-wrap"><table class="large-table"><thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th><th>Weight</th><th></th></tr></thead><tbody id="exerciseTable">
+<tr><td>🏋 Bench Press</td><td>3</td><td>10</td><td>40 kg</td><td>⋮</td></tr>
+<tr><td>🏋 Incline Dumbbell Press</td><td>3</td><td>12</td><td>12 kg</td><td>⋮</td></tr>
+<tr><td>🏃 Tricep Pushdown</td><td>3</td><td>12</td><td>20 kg</td><td>⋮</td></tr>
+<tr><td>🏋 Dumbbell Fly</td><td>3</td><td>10</td><td>10 kg</td><td>⋮</td></tr>
+<tr><td>🏋 Shoulder Press</td><td>3</td><td>12</td><td>15 kg</td><td>⋮</td></tr>
+</tbody></table></div></article>
+<article class="panel"><div class="panel-head"><h2>⌁ Workout Summary</h2></div>
+<div class="bar-chart"><span style="height:45%"></span><span style="height:65%"></span><span style="height:85%"></span><span style="height:35%"></span><span style="height:68%"></span><span style="height:90%"></span><span style="height:72%"></span></div>
+<div class="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+<div class="summary-lines"><p>Total Workout Time <b>45 min</b></p><p>Total Exercises <b>5</b></p><p>Calories Burned <b>320 kcal</b></p></div>
+<button class="outline-btn" onclick="location.href='workout.html'">View All Workouts →</button>
+</article></section>
+<section class="panel workout-history"><div class="panel-head"><h2>My Workouts</h2><span class="muted-text">Saved on this device</span></div><div id="workoutList" class="workout-list"></div></section>
+</main></div>
+<div class="modal" id="workoutModal"><div class="modal-box"><button class="close" onclick="closeModal('workoutModal')">×</button><h2>Create Workout</h2><label>Workout Name<input id="workoutName" placeholder="e.g. Chest & Triceps"></label><button class="primary-btn" onclick="addWorkout()">Create Workout</button></div></div>
+<div class="modal" id="exerciseModal"><div class="modal-box"><button class="close" onclick="closeModal('exerciseModal')">×</button><h2>Add Exercise</h2><label>Exercise<input id="exerciseName" placeholder="e.g. Squats"></label><div class="form-grid"><label>Sets<input id="exerciseSets" type="number" value="3"></label><label>Reps<input id="exerciseReps" type="number" value="10"></label><label>Weight<input id="exerciseWeight" placeholder="20 kg"></label></div><button class="primary-btn" onclick="addExercise()">Add Exercise</button></div></div>
+<script src="script.js"></script></body></html>

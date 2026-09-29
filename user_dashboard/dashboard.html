@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+    <header class="topbar">
+        <a class="brand" href="dashboard.html">
+            <span class="brand-mark">FIT</span><span>FITTRACK</span>
+        </a>
+        <div class="top-user">
+            <span class="notification">●</span>
+            <span class="avatar">R</span>
+            <span class="top-user-name">Hi, Rahul</span>
+            <span class="chevron">⌄</span>
+        </div>
+    </header>
+
+    <div class="app">
+        <aside class="sidebar">
+            <nav>
+                <a class="nav-item active" href="dashboard.html"><span>⌂</span>Dashboard</a>
+                <a class="nav-item" href="workout.html"><span>♢</span>Workout</a>
+                <a class="nav-item" href="diet.html"><span>♡</span>Diet</a>
+                <a class="nav-item" href="progress.html"><span>▥</span>Progress</a>
+                <a class="nav-item" href="profile.html"><span>♙</span>Profile</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section class="page-heading">
+                <div>
+                    <h1 data-greeting>Good Morning, Rahul!</h1>
+                    <p>Stay consistent, stay stronger!</p>
+                </div>
+            </section>
+
+            <section class="stat-grid four">
+                <article class="stat-card green">
+                    <div class="stat-icon">⚖</div>
+                    <div><small>Current Weight</small><strong data-dashboard-weight>68 kg</strong><em>↓ 2 kg since last month</em></div>
+                </article>
+                <article class="stat-card blue">
+                    <div class="stat-icon">◔</div>
+                    <div><small>BMI</small><strong>22.4</strong><em>Normal Range</em></div>
+                </article>
+                <article class="stat-card orange">
+                    <div class="stat-icon">♨</div>
+                    <div><small>Workout Streak</small><strong>7 Days</strong><em>Keep it up!</em></div>
+                </article>
+                <article class="stat-card purple">
+                    <div class="stat-icon">◎</div>
+                    <div><small>Fitness Goal</small><strong data-dashboard-goal>Muscle Gain</strong><em>On Track</em></div>
+                </article>
+            </section>
+
+            <section class="dashboard-main-grid">
+                <article class="panel workout-preview">
+                    <div class="panel-head">
+                        <h2>♢ Today's Workout</h2>
+                        <a href="workout.html">View All →</a>
+                    </div>
+                    <h3>Chest &amp; Triceps</h3>
+                    <div class="workout-with-image">
+                        <div class="table-wrap">
+                            <table>
+                                <thead><tr><th>Exercise</th><th>Sets</th><th>Reps</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Bench Press</td><td>3</td><td>10</td></tr>
+                                    <tr><td>Incline Dumbbell Press</td><td>3</td><td>12</td></tr>
+                                    <tr><td>Tricep Pushdown</td><td>3</td><td>12</td></tr>
+                                    <tr><td>Dumbbell Fly</td><td>3</td><td>10</td></tr>
+                                </tbody>
+                            </table>
+                            <button class="primary-btn" onclick="location.href='workout.html'">▶ Start Workout</button>
+                        </div>
+                        <div class="quote-card">
+                            <div class="dumbbell">🏋</div>
+                            <b>SMALL STEPS<br><span>MAKE BIG RESULTS</span></b>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel progress-preview">
+                    <div class="panel-head">
+                        <h2>⌁ Progress Overview</h2>
+                        <a href="progress.html">View Details →</a>
+                    </div>
+                    <div class="chart-tabs"><button class="selected">Weight</button><button>BMI</button><button>Workout Streak</button></div>
+                    <div class="line-chart">
+                        <div class="y-labels"><span>75</span><span>72</span><span>69</span><span>66</span><span>63</span></div>
+                        <div class="chart-area">
+                            <div class="grid-line l1"></div><div class="grid-line l2"></div><div class="grid-line l3"></div><div class="grid-line l4"></div><div class="grid-line l5"></div>
+                            <svg viewBox="0 0 500 220" preserveAspectRatio="none">
+                                <polyline points="10,30 170,90 330,145 490,165" fill="none" stroke="#269b36" stroke-width="4"/>
+                                <circle cx="10" cy="30" r="6" fill="#269b36"/><circle cx="170" cy="90" r="6" fill="#269b36"/><circle cx="330" cy="145" r="6" fill="#269b36"/><circle cx="490" cy="165" r="6" fill="#269b36"/>
+                            </svg>
+                            <div class="x-labels"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="bottom-grid">
+                <article class="panel">
+                    <div class="panel-head"><h2>♡ Today's Meal Plan</h2><a href="diet.html">View Diet Plan →</a></div>
+                    <div class="meal-row"><span class="food-icon">🍳</span><div><b>Breakfast:</b><p>Oats + Banana + Almonds</p><small>450 kcal</small></div><span class="status done">Completed</span><span>›</span></div>
+                    <div class="meal-row"><span class="food-icon">🥗</span><div><b>Lunch</b><p>Chicken + Rice + Vegetables</p><small>650 kcal</small></div><span class="status pending">Pending</span><span>›</span></div>
+                    <div class="meal-row"><span class="food-icon">🍛</span><div><b>Dinner</b><p>Paneer + Roti + Salad</p><small>550 kcal</small></div><span class="status pending">Pending</span><span>›</span></div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-head"><h2>▥ Quick Stats</h2></div>
+                    <div class="quick-row green-bg"><span>♢ Total Workouts</span><b>12</b></div>
+                    <div class="quick-row orange-bg"><span>♨ Calories Consumed</span><b>1,480 kcal</b></div>
+                    <div class="quick-row purple-bg"><span>♜ Protein Intake</span><b>85 g</b></div>
+                    <div class="quick-row blue-bg"><span>◉ Water Intake</span><b>2.1 L</b></div>
+                </article>
+
+                <article class="panel">
+                    <div class="panel-head"><h2>◎ Your Goals</h2><a href="progress.html">View All →</a></div>
+                    <div class="goal-row"><span>⚖ Weight Loss</span><b>0 / 5 kg</b><div class="progress"><i style="width:8%"></i></div></div>
+                    <div class="goal-row"><span>💪 Muscle Gain</span><b>2 / 10 kg</b><div class="progress"><i style="width:22%"></i></div></div>
+                    <div class="goal-row"><span>♢ Strength</span><b>0 / 100 kg</b><div class="progress"><i style="width:4%"></i></div></div>
+                    <div class="goal-row"><span>🏃 General Fitness</span><b>3 / 7 days</b><div class="progress"><i style="width:43%"></i></div></div>
+                </article>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

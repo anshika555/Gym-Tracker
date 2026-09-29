@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FitTrack - Diet</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="diet">
+<header class="topbar"><a class="brand" href="dashboard.html"><span class="brand-mark">FIT</span><span>FITTRACK</span></a><div class="top-user"><span class="notification">●</span><span class="avatar">R</span><span class="top-user-name">Hi, Rahul</span><span>⌄</span></div></header>
+<div class="app"><aside class="sidebar"><nav>
+<a class="nav-item" href="dashboard.html"><span>⌂</span>Dashboard</a><a class="nav-item" href="workout.html"><span>♢</span>Workout</a><a class="nav-item active" href="diet.html"><span>♡</span>Diet</a><a class="nav-item" href="progress.html"><span>▥</span>Progress</a><a class="nav-item" href="profile.html"><span>♙</span>Profile</a>
+</nav></aside>
+<main class="content"><section class="page-heading"><div><h1>Diet Plan</h1><p>Eat better. Feel better. Reach your goals.</p></div><button class="primary-btn" onclick="openModal('mealModal')">＋ Add Meal</button></section>
+<section class="stat-grid four">
+<article class="stat-card orange"><div class="stat-icon">♨</div><div><small>Calories</small><strong>1,480</strong><em>Target: 2,500 kcal</em><div class="mini-progress"><i style="width:59%"></i></div></div></article>
+<article class="stat-card blue"><div class="stat-icon">♜</div><div><small>Protein</small><strong>85 g</strong><em>Target: 150 g</em><div class="mini-progress blue-bar"><i style="width:57%"></i></div></div></article>
+<article class="stat-card green"><div class="stat-icon">◈</div><div><small>Carbs</small><strong>180 g</strong><em>Target: 300 g</em><div class="mini-progress"><i style="width:60%"></i></div></div></article>
+<article class="stat-card purple"><div class="stat-icon">◉</div><div><small>Fats</small><strong>50 g</strong><em>Target: 80 g</em><div class="mini-progress purple-bar"><i style="width:63%"></i></div></div></article>
+</section>
+<section class="two-col diet-grid"><article class="panel"><div class="panel-head"><h2>♡ Today's Meals</h2></div>
+<div id="mealList">
+<div class="meal-card"><span class="food-icon large">🍳</span><div><b>Breakfast <small>(8:30 AM)</small></b><p>Oats + Banana + Almonds</p><small>450 kcal</small></div><span>›</span></div>
+<div class="meal-card"><span class="food-icon large">🥗</span><div><b>Lunch <small>(1:00 PM)</small></b><p>Chicken + Rice + Vegetables</p><small>650 kcal</small></div><span>›</span></div>
+<div class="meal-card"><span class="food-icon large">🥛</span><div><b>Evening Snack <small>(5:00 PM)</small></b><p>Protein Shake + Nuts</p><small>250 kcal</small></div><span>›</span></div>
+<div class="meal-card"><span class="food-icon large">🍛</span><div><b>Dinner <small>(8:00 PM)</small></b><p>Paneer + Roti + Salad</p><small>550 kcal</small></div><span>›</span></div>
+</div></article>
+<div class="stack"><article class="panel water-card"><div class="panel-head"><h2>◉ Daily Water Intake</h2></div><div class="water-ring" id="waterRing"><strong id="waterValue">2.1 L</strong><small>/ 3 L</small></div><p>Keep going! You're doing great.</p><button class="outline-btn" onclick="logWater()">Log Water</button></article>
+<article class="panel"><div class="panel-head"><h2>💡 Nutrition Tips</h2></div><p class="tip">Include more vegetables and lean protein in your meals for better results.</p></article></div></section>
+</main></div>
+<div class="modal" id="mealModal"><div class="modal-box"><button class="close" onclick="closeModal('mealModal')">×</button><h2>Add Meal</h2><label>Meal Name<input id="mealName" placeholder="e.g. Paneer Salad"></label><label>Calories<input id="mealCalories" type="number" placeholder="400"></label><button class="primary-btn" onclick="addMeal()">Add Meal</button></div></div>
+<script src="script.js"></script></body></html>
