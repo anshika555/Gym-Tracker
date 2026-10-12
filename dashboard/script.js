@@ -3,7 +3,7 @@ const STORAGE_KEY = 'fittrackData';
 
 const DEFAULT_DATA = {
     profile: {
-        name: 'Rahul Sharma', age: 22, height: '175 cm', weight: '68 kg',
+        name: 'Girish Sharma', age: 18, height: '175 cm', weight: '75 kg',
         gender: 'Male', fitnessLevel: 'Beginner', goal: 'Muscle Gain',
         bio: 'Small steps every day lead to big results.'
     },

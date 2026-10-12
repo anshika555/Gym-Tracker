@@ -1,22 +1,13 @@
 // ==========================================
 // FITTRACK - REGISTER & LOGIN JAVASCRIPT
 // ==========================================
-// ------------------------------------------
-// Select forms
-// ------------------------------------------
 const signupForm = document.querySelector(".form-part1");
 const forms = document.querySelectorAll("form");
-// The first form-part1 belongs to signup
-// The second form-part1 belongs to login
 const signupPart1 = document.querySelectorAll(".form-part1")[0];
 const loginPart1 = document.querySelectorAll(".form-part1")[1];
-// ------------------------------------------
-// SIGN-UP FORM
-// ------------------------------------------
 const allInputs = document.querySelectorAll(
     ".form-part1 input"
 );
-// Find signup inputs
 if (signupPart1) {
     signupPart1.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -28,14 +19,10 @@ if (signupPart1) {
         const email = inputs[5].value.trim();
         const password = inputs[6].value;
         const confirmPassword = inputs[7].value;
-        // ----------------------------------
-        // Basic validation
-        // ----------------------------------
         if (nickname === "") {
             alert("Please enter your nickname.");
             return;
         }
-        // Age validation
         if (age === "" || isNaN(age)) {
             alert("Please enter a valid age.");
             return;
@@ -44,7 +31,6 @@ if (signupPart1) {
             alert("Please enter an age between 13 and 100.");
             return;
         }
-        // Gender validation
         const gender = document.querySelector(
             'input[name="gender"]:checked'
         );
@@ -52,7 +38,6 @@ if (signupPart1) {
             alert("Please select your gender.");
             return;
         }
-        // Height validation
         if (height === "" || isNaN(height)) {
             alert("Please enter a valid height.");
             return;
@@ -61,7 +46,6 @@ if (signupPart1) {
             alert("Please enter a valid height between 50 and 250 cm.");
             return;
         }
-        // Weight validation
         if (weight === "" || isNaN(weight)) {
             alert("Please enter a valid weight.");
             return;
@@ -70,26 +54,20 @@ if (signupPart1) {
             alert("Please enter a valid weight between 20 and 300 kg.");
             return;
         }
-        // Email validation
         const emailPattern =
             /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
             alert("Please enter a valid email address.");
             return;
         }
-        // Password validation
         if (password.length < 8) {
             alert("Password must contain at least 8 characters.");
             return;
         }
-        // Confirm password
         if (password !== confirmPassword) {
             alert("Passwords do not match.");
             return;
         }
-        // ----------------------------------
-        // Experience validation
-        // ----------------------------------
         const experience = document.querySelector(
             'input[name="stand"]:checked'
         );
@@ -97,9 +75,6 @@ if (signupPart1) {
             alert("Please select your experience level.");
             return;
         }
-        // ----------------------------------
-        // Goal validation
-        // ----------------------------------
         const goal = document.querySelector(
             'input[name="goal"]:checked'
         );
@@ -107,32 +82,22 @@ if (signupPart1) {
             alert("Please select your fitness goal.");
             return;
         }
-        // ----------------------------------
-        // Calculate BMI
-        // ----------------------------------
         const heightInMeters =
             Number(height) / 100;
         const bmi =
             Number(weight) /
             (heightInMeters * heightInMeters);
-        // ----------------------------------
-        // Successful registration
-        // ----------------------------------
         alert(
             "Registration successful!\n\n" +
             "Welcome to FitTrack, " + nickname + "!\n\n" +
             "Your BMI is: " + bmi.toFixed(1)
         );
-        // Clear form
         signupPart1.reset();
         document.querySelector(
             ".form-part2"
         ).reset();
     });
 }
-// ------------------------------------------
-// LOGIN FORM
-// ------------------------------------------
 if (loginPart1) {
     loginPart1.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -142,7 +107,6 @@ if (loginPart1) {
             loginInputs[0].value.trim();
         const password =
             loginInputs[1].value;
-        // Email validation
         if (email === "") {
             alert("Please enter your email.");
             return;
@@ -153,7 +117,6 @@ if (loginPart1) {
             alert("Please enter a valid email address.");
             return;
         }
-        // Password validation
         if (password === "") {
             alert("Please enter your password.");
             return;
@@ -164,18 +127,12 @@ if (loginPart1) {
             );
             return;
         }
-        // Successful login
         alert(
             "Login successful!\n\n" +
             "Welcome back to FitTrack!"
         );
-        // You can replace this later with:
-        // window.location.href = "../dashboard/dashboard.html";
     });
 }
-// ------------------------------------------
-// PASSWORD SHOW / HIDE
-// ------------------------------------------
 const passwordInputs =
     document.querySelectorAll('input[type="password"]');
 passwordInputs.forEach(function (input) {
@@ -202,9 +159,6 @@ passwordInputs.forEach(function (input) {
         }
     );
 });
-// ------------------------------------------
-// RESET BUTTON
-// ------------------------------------------
 const resetButtons =
     document.querySelectorAll(
         'button[type="reset"]'
@@ -220,9 +174,6 @@ resetButtons.forEach(function (button) {
         }
     });
 });
-// ------------------------------------------
-// NAVBAR EFFECT
-// ------------------------------------------
 const navbar =
     document.querySelector(".navbar");
 window.addEventListener("scroll", function () {
@@ -232,9 +183,6 @@ window.addEventListener("scroll", function () {
         navbar.classList.remove("scrolled");
     }
 });
-// ------------------------------------------
-// NAVBAR LINK ANIMATION
-// ------------------------------------------
 const navLinks =
     document.querySelectorAll(".nav-links a");
 navLinks.forEach(function (link) {
@@ -253,9 +201,6 @@ navLinks.forEach(function (link) {
         }
     );
 });
-// ------------------------------------------
-// DYNAMIC FOOTER YEAR
-// ------------------------------------------
 const footerText =
     document.querySelector("footer p");
 if (footerText) {
@@ -266,9 +211,6 @@ if (footerText) {
         " FitTrack | Your Fitness Companion";
 
 }
-// ------------------------------------------
-// PAGE LOAD ANIMATION
-// ------------------------------------------
 window.addEventListener("load", function () {
     const accountPages =
         document.querySelectorAll(".account-page");
